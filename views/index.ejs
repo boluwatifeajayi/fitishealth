@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>FIT IS HEALTH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      />
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<!-- <a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a> -->
+									<ul class="icons">
+										<!-- <li><a href="#" class="fab fa-twitter"></li> -->
+										<li><a href="#" class="fab fa-facebook"></a></li>
+										<li><a href="#" class="fab fa-instagram"></a></li>
+										<li><a href="#" class="fab fa-twitter"></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Welcome to Fit is health</h1>
+										</header>
+										<p>Join the health and fitness revolution and take control of your body and your life. we are movement towards health and fitness, and encourages you to take charge of your body  and life by following our content.</p>
+										<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80" alt="" />
+									</span>
+								</section>
+
+							<!-- Section -->
+								
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Blog Posts</h2>
+									</header>
+									<div class="posts">
+                                        <% for (key in articles) { %>
+										<article>
+											<a href="#" class="image"><img src="<%=articles[key].image%>" alt="" /></a>
+											<h3><%= articles[key].title %></h3>
+											<p><%=articles[key].description%> <br/> <b><%= articles[key].category %></b></p>
+                                           
+											<ul class="actions">
+												<li><a href="/articles/<%=articles[key]._id%>" class="button">More</a></li>
+											</ul>
+										</article>
+                                        <% } %>
+                                       
+                                          
+										
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!-- <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section> -->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+                                        <h2>FIT IS HEALTH</h2>
+									</header>
+									<ul>
+										<li><a href="#">Homepage</a></li>
+										<li><a href="#">REGISTER</a></li>
+										<li><a href="#">lOGIN</a></li>
+										
+										<li><a href="#">CREATE A POST</a></li>
+										<li><a href="#">VIEW POSTS</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; 2022 coded with love and fun by bolu</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

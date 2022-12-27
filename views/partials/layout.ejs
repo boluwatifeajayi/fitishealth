@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Pk-LilHCNJdJ_yn-6WDGAiQLA7hrHG8r8VEul-9660s" />
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon"
+        href="/img/lightbulb.png"
+        type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand&display=swap" rel="stylesheet">
+    <style type="text/css">
+        
+    </style>
+        
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/" style="font-weight: bolder; color: #022d5a;"><img src="/img/bluenovatelogo3.png"
+                alt="bluenovatelogo" style="width: 180px; height: 60px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                
+                
+            </ul>
+            <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href='/' style="color: #022d5a">Home</a>
+            </li>
+            
+            <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href='/about' style="color: #022d5a">About Us</a>
+            </li>
+            <li class="nav-item dropdown" style="list-style-type: none;">
+                <a class="nav-link dropdown-toggle" style="color: #022d5a" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog Posts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/allposts">All Blog Post Categories</a>
+                    <a class="dropdown-item" href="/lifestyle">Life Style</a>
+                    
+                    <a class="dropdown-item" href="/healthandbeauty">Health And Beauty</a>
+                    <a class="dropdown-item" href="/food_and_dishes">Food And Dishes</a>
+                    <a class="dropdown-item" href="/technology_and_webdevelopment">Technology and Web
+                        Development</a>
+                    <a class="dropdown-item" href="/gaming_and_fiction">Gaming and Tv</a>
+                    <a class="dropdown-item" href="/entertainment">Entertainment</a>
+                    <a class="dropdown-item" href="/other">Others</a>
+                    
+                </div>
+            </li>
+            <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href='/contact' style="color: #022d5a">Contact Us</a>
+            </li>
+            <!-- <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href='/home#newsletter' style="color: #022d5a;">News Letter</a>
+            </li> -->
+                <%if (user) { %>
+                 <a class="nav-link btn btn-light" href='/articles/add' style="color: #022d5a; font-weight: bolder;">Add
+                     New Post</a>
+                <% } %>
+                <%if (!user) { %>
+               
+                <% } else { %>
+                <a class="nav-link" href='/users/logout' style="color:#022d5a;">Logout</a>
+                <% } %>
+                    
+                
+                <!-- <a class="nav-link" href='/users/registerjoin' style="color: white;">Register</a> -->
+               
+            
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+            
+        <script src="/js/main.js"></script>
+</body>
+</html>

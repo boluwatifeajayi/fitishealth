@@ -1,0 +1,87 @@
+<%- include('partials/layout.ejs') %>
+<title>Edit Post | Bluenovate</title>
+<div class="container">
+    <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>
+    <script charset="utf-8" src="//cdn.iframe.ly/embed.js?api_key={API KEY}"></script>
+
+    <h1>Edit Post</h1>
+    <form action="/articles/edit/<%=article._id%>" method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" id="" value="<%-article.title%>">
+        </div>
+        <div class="form-group">
+            <label for="title">Author(your name)</label>
+            <input type="text" class="form-control" name="writer" value="<%-article.writer%>" required>
+        </div>
+        <div class="form-group">
+            <label for="title">Current Date</label>
+            <input type="date" class="form-control" name="postDate" value="<%-article.postDate%>" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text" class="form-control" name="description" required><%-article.description%></textarea>
+        </div>
+        <div class="form-group">
+            <label for="description">Valid Image Url</label>
+            <input type="url" class="form-control" name="image" value="<%-article.image%>" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Post Category</label>
+            <select class="form-control" name="category">
+                <option value="Uncategoriezed"><%-article.category%></option>
+                <option>Life Style</option>
+                <option>Life Hacks</option>
+                <option>Health And Beauty</option>
+                <option>Food And Dishes</option>
+                <option>Technology And Web Development</option>
+                <option>Gaming And Fiction</option>
+                <option>Entertainment</option>
+                <option>Uncategoriezed</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="body">Body</label>
+            <textarea class="form-control" name="body" id="editor"><%-article.body%></textarea>
+
+        </div>
+        <hr>
+        <h4>Recommended Read Posts (Optional)</h4>
+        <div class="form-group">
+            <label for="description">Recommended One Title (Optional)</label>
+            <input type="text" class="form-control" name="nextTitleOne" value="<%-article.nextTitleOne%>">
+        </div>
+        <div class="form-group">
+            <label for="description">Recommended One Link (Optional)</label>
+            <input type="url" class="form-control" name="nextLinkOne" value="<%-article.nextLinkOne%>">
+        </div>
+        <div class="form-group">
+            <label for="description">Recommended Two Title (Optional)</label>
+            <input type="text" class="form-control" name="nextTitleTwo" value="<%-article.nextTitleTwo%>">
+        </div>
+        <div class="form-group">
+            <label for="description">Recommended Two Link (Optional)</label>
+            <input type="url" class="form-control" name="nextLinkTwo" value="<%-article.nextLinkTwo%>">
+        </div>
+        <div class="form-group">
+            <label for="description">Recommended Three Title (Optional)</label>
+            <input type="text" class="form-control" name="nextTitleThree" value="<%-article.nextTitleThree%>">
+        </div>
+        <div class="form-group">
+            <label for="description">Recommended Three Link (Optional)</label>
+            <input type="url" class="form-control" name="nextLinkThree" value="<%-article.nextLinkThree%>">
+        </div>
+        
+
+        <br>
+        <input type="submit" value="Update Post" class="btn btn-primary mb-4">
+        <a href="/" class="btn btn-secondary mb-4">Cancel</a>
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+    </form>
+</div>
